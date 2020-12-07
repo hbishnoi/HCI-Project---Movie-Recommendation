@@ -21,11 +21,11 @@ Download this zip code and run them into your IDE or command prompt —
 
 To apply changes into database like creating tables for the application, run this command (make sure in the folder 'hci'):
 
-    \employee_project> python manage.py makemigrations project
+    \project> python manage.py makemigrations project
 
-    \employee_project> python manage.py sqlmigrate 0001
+    \project> python manage.py sqlmigrate 0001
 
-    \employee_project> python manage.py migrate
+    \project> python manage.py migrate
 
 To run server on your browser where your project will run, run this command:
 

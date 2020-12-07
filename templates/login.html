@@ -1,0 +1,90 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container text-center" style="width: 30%; margin-top: 100px">
+  <div class="jumbotron jumbotron-fluid">
+    <!-- <form class="form-signin">
+      <div class="text-center mb-4">
+        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      </div>
+      <div class="form-label-group">
+        <input
+          type="email"
+          id="inputEmail"
+          class="form-control"
+          placeholder="Email address"
+          required
+          autofocus
+        />
+        <label for="inputEmail" class="sr-only">Email address</label>
+      </div>
+      <div class="form-label-group">
+        <input
+          type="password"
+          id="inputPassword"
+          class="form-control"
+          placeholder="Password"
+          required
+          autofocus
+        />
+        <label for="inputPassword" class="sr-only">Password</label>
+      </div>
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me" /> Remember me
+        </label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">
+        Sign in
+      </button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2020</p>
+    </form> -->
+
+    {% if error %}
+    <div class="col-md-12 text center" style="color: red">{{error}}</div>
+    {% endif %} {% if note %}
+    <div class="col-md-12 text center" style="color: green">{{note}}</div>
+    {% endif %}
+
+    <form class="form-signin" action="login" method="POST">
+      {% csrf_token %}
+      <div class="text-center mb-4">
+        <h1 class="h3 mb-3 font-weight-normal">Please Login</h1>
+      </div>
+      <div class="form-label-group">
+        <input
+          type="username"
+          id="username"
+          name="username"
+          class="form-control"
+          placeholder="Username"
+          required
+          autofocus
+        />
+        <label for="username">Username</label>
+      </div>
+      <div class="form-label-group">
+        <input
+          type="password"
+          id="password"
+          name="password"
+          class="form-control"
+          placeholder="Password"
+          required
+        />
+        <label for="password">Password</label>
+      </div>
+
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me" /> Remember me
+        </label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">
+        Login
+      </button>
+      <p class="mt-5 mb-3 text-muted text-center">&copy; 2020</p>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

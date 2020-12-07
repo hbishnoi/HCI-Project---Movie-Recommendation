@@ -1,0 +1,113 @@
+{% extends 'account/base.html' %} {% block content %}
+<section class="jumbotron text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p>
+          Name:
+          <span class="text-muted">{{user.first_name}} {{user.last_name}}</span>
+        </p>
+        <p>Username: <span class="text-muted">{{user.username}}</span></p>
+        <p>Email: <span class="text-muted">{{user.email}}</span></p>
+        <!-- <p>email: Himansshu@gmail.com</p> -->
+      </div>
+    </div>
+    <!-- <hr class="my-4" /> -->
+  </div>
+</section>
+<div>
+  <div class="container">
+    <div class="row">
+      <h1 class="col-md-12 text-center">Searched Movies</h1>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <a href="details">
+          <div class="card mb-4 shadow-sm">
+            <img
+              class="image-thumbnail"
+              src="https://m.media-amazon.com/images/M/MV5BOTdmNTFjNDEtNzg0My00ZjkxLTg1ZDAtZTdkMDc2ZmFiNWQ1XkEyXkFqcGdeQXVyNTAzNzgwNTg@._V1_.jpg"
+            />
+            <div class="card-body">
+              <p class="card-text">1917 (2019)</p>
+              <div>
+                <small>Imdb Rating:</small>
+                <small class="text-muted">8.3</small>
+              </div>
+              <div>
+                <small>Time:</small>
+                <small class="text-muted">1h 59min</small>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <a href="details">
+          <div class="card mb-4 shadow-sm">
+            <img
+              class="image-thumbnail"
+              src="https://m.media-amazon.com/images/M/MV5BZDQ2NTdmNDgtMGIwMS00ODE2LTk5M2EtZGZhYzc4MWRlNTU3XkEyXkFqcGdeQXVyNTc4MjczMTM@._V1_.jpg"
+            />
+            <div class="card-body">
+              <p class="card-text">The New Mutants (2020)</p>
+              <div>
+                <small>Imdb Rating:</small>
+                <small class="text-muted">5.3</small>
+              </div>
+              <div>
+                <small>Time:</small>
+                <small class="text-muted">1h 34min</small>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <a href="details">
+          <div class="card mb-4 shadow-sm">
+            <img
+              class="image-thumbnail"
+              src="https://m.media-amazon.com/images/M/MV5BYzg0NGM2NjAtNmIxOC00MDJmLTg5ZmYtYzM0MTE4NWE2NzlhXkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_.jpg"
+            />
+            <div class="card-body">
+              <p class="card-text">Tenet (2020)</p>
+              <div>
+                <small>Imdb Rating:</small>
+                <small class="text-muted">7.7</small>
+              </div>
+              <div>
+                <small>Time:</small>
+                <small class="text-muted">2h 30min</small>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <a href="details">
+          <div class="card mb-4 shadow-sm">
+            <img
+              class="image-thumbnail"
+              src="https://m.media-amazon.com/images/M/MV5BMjA0YjYyZGMtN2U0Ni00YmY4LWJkZTItYTMyMjY3NGYyMTJkXkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_.jpg"
+            />
+            <div class="card-body">
+              <p class="card-text">Frozen II (2019)</p>
+              <div>
+                <small>Imdb Rating:</small>
+                <small class="text-muted">6.9</small>
+              </div>
+              <div>
+                <small>Time:</small>
+                <small class="text-muted">1h 43min</small>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

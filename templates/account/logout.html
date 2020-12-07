@@ -1,0 +1,24 @@
+{% extends 'account/base.html' %} {% block content %}
+<div class="container text-center">
+  <div class="row">
+    <div class="col-md-12" style="margin: 250px 0px">
+      <h1>Sign Out</h1>
+
+      <p>Are you sure you want to Log out?</p>
+
+      <form method="post" action="home">
+        {% csrf_token %}
+        <!-- {% if redirect_field_value %}
+  <input
+    type="hidden"
+    name="{{ redirect_field_name }}"
+    value="{{ redirect_field_value }}"
+  />
+  {% endif %} -->
+        <button type="submit">Log Out</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+html {
+    background-color: #000000; 
+  }
+body{
+    color: rgb(167, 157, 73);
+    background-color: rgba(48, 77, 63, 0.185);
+}
+
+.navbar-light .navbar-brand{
+    color: white;
+    
+}
+
+
+a{
+    color: rgb(167, 157, 73);
+}
+a:hover{
+    color:  rgb(167, 157, 73);;
+}
+.jumbotron{
+    background-color:transparent !important; 
+}

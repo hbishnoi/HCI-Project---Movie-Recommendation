@@ -1,0 +1,116 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container mt-4">
+  <div class="row">
+    <h1 class="col-md-12 text-center">Movie Data</h1>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-lg-6 col-sm-6 col-sm-12 text-center">
+        <img
+          class="image-thumbnail"
+          src="https://m.media-amazon.com/images/M/MV5BOTdmNTFjNDEtNzg0My00ZjkxLTg1ZDAtZTdkMDc2ZmFiNWQ1XkEyXkFqcGdeQXVyNTAzNzgwNTg@._V1_.jpg"
+        />
+    </div>
+    <div class="col-lg-6 col-sm-6 col-sm-12 card mb-4 shadow-sm">
+      <div class="card-body">
+        <p class="card-text">1917 (2019)</p>
+        <div>
+          <small>Imdb Rating:</small>
+          <small class="text-muted">8.3</small>
+        </div>
+        <div>
+          <small>Time:</small>
+          <small class="text-muted">1h 59min</small>
+        </div>
+        <div>
+          <small>Genre:</small>
+          <small class="text-muted">War/Action</small>
+        </div>
+        <div>
+          <small>Director:</small>
+          <small class="text-muted">Sam Mendes</small>
+        </div>
+        <div>
+          <small>Cast:</small>
+          <small class="text-muted">
+            Dean-Charles Chapman, George MacKay, Daniel Mays
+          </small>
+        </div>
+        <div>
+          <small>Release Date:</small>
+          <small class="text-muted"> 10 January 2020 (USA) </small>
+        </div>
+        <div>
+          <small>Summary:</small>
+          <small class="text-muted"
+            >April 6th, 1917. As a regiment assembles to wage war deep in enemy
+            territory, two soldiers are assigned to race against time and
+            deliver a message that will stop 1,600 men from walking straight
+            into a deadly trap.
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="my-4" />
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Comment Section:</3>
+    </div>
+    <div class="col-md-12 form-group">
+        <span>1.</span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <p>Best World War Movie</p>
+        <span class="text-muted">Great Cinematography. Brilliant acting and Direction.</span>
+    </div>
+    <div class="col-md-12 form-group">
+        <span>2.</span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <p>Astonishing Movie</p>
+        <span class="text-muted">This is the best movie of this decade.</span>
+    </div>
+    <div class="col-md-12 form-group">
+        <span>3.</span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <p>This movie deserves an Oscar.</p>
+        <span class="text-muted">Guaranteed Oscar goes to this movie.</span>
+    </div>
+    <div class="col-md-12 form-group" style="display: none;" id="divCheckbox">
+        <span>4.</span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <p>A must Watch</p>
+        <span class="text-muted">Nice movie to watch in quarantine.</span>
+    </div>
+    <div class="col-md-12 form-group">
+        <span>Comment below:</span><br>
+        <span>Rating: </span>
+        <span class="fa fa-star" style="margin-left: 35px"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span><br>
+        <span>Title: </span><input style="margin-left: 50px"><br>
+        <span>Comment:</span><textarea type="text" class="text-muted" style="margin-left: 15px"></textarea>
+        <button type="submit" class="btn" id="comment-submit" onclick="show();">submit</button>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

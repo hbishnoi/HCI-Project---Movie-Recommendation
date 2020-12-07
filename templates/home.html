@@ -1,0 +1,189 @@
+{% extends 'base.html' %} {% block content %}
+
+<!-- <h1>hello {{name}}</h1>
+
+<form action="title" method="POST">
+  {% csrf_token %} Enter Num : <input number="text" name="title" /><br />
+   Enter Num : <input number="text" name="num2" /><br /> -->
+<!-- <input type="submit" /> -->
+<!-- </form> -->
+
+<div class="container" style="margin-top: 30px">
+  <div class="jumbotron jumbotron-fluid text-center">
+    <h1>Recommendation System Model</h1>
+    <p class="lead">Designed to build personalized Movie Recommendations</p>
+    <hr class="my-4" />
+    <p class="lead">- Enter the name of Movie -</p>
+    <form
+      class="form-inline my-2 my-lg-0 justify-content-center"
+      action="title"
+      method="POST"
+    >
+      {% csrf_token %}
+      <input
+        class="form-control mr-sm-2"
+        type="search"
+        placeholder="Movie Name"
+        aria-label="Search"
+        name="title"
+        required
+      />
+      <button type="submit" class="btn btn-success">Search</button>
+    </form>
+    <!-- <hr class="my-4" /> -->
+    <h1 class="lead" style="margin: 20px">OR</h1>
+    <!-- <hr class="my-4" /> -->
+    <p class="lead">-Recommendation by-</p>
+    <form
+      class="form-inline my-2 my-lg-0 justify-content-center"
+      action="genre"
+      method="POST"
+    >
+      {% csrf_token %}
+      <select
+        class="form-control mr-sm-2 custom-select"
+        id="inputGroupSelect02"
+        name="genre"
+        required
+      >
+        <option value="">-Genre-</option>
+        <option value="Action">Action</option>
+        <option value="Animation">Animation</option>
+        <option value="Biography">Biography</option>
+        <option value="Comedy">Comedy</option>
+        <option value="Crime">Crime</option>
+        <option value="Documentry">Documentry</option>
+        <option value="Drama">Drama</option>
+        <option value="Family">Family</option>
+        <option value="Fantasy">Fantasy</option>
+        <option value="History">History</option>
+        <option value="Music">Music</option>
+        <option value="Mystery">Mystery</option>
+        <option value="Romance">Romance</option>
+        <option value="Sci-Fi">Sci-Fi</option>
+        <option value="Thriller">Thriller</option>
+      </select>
+      <button type="submit" class="btn btn-success">Search</button>
+    </form>
+  </div>
+</div>
+
+<div>
+  <div class="container">
+    <div class="row">
+      <h1 class="col-md-12 text-center">Top Trending Movies</h1>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <a href="details">
+          <div class="card mb-4 shadow-sm">
+            <img
+              class="image-thumbnail"
+              src="https://m.media-amazon.com/images/M/MV5BOTdmNTFjNDEtNzg0My00ZjkxLTg1ZDAtZTdkMDc2ZmFiNWQ1XkEyXkFqcGdeQXVyNTAzNzgwNTg@._V1_.jpg"
+            />
+            <div class="card-body">
+              <p class="card-text">1917 (2019)</p>
+              <div>
+                <small>Imdb Rating:</small>
+                <small class="text-muted">8.3</small>
+              </div>
+              <div>
+                <small>Time:</small>
+                <small class="text-muted">1h 59min</small>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <a href="details">
+          <div class="card mb-4 shadow-sm">
+            <img
+              class="image-thumbnail"
+              src="https://m.media-amazon.com/images/M/MV5BZDQ2NTdmNDgtMGIwMS00ODE2LTk5M2EtZGZhYzc4MWRlNTU3XkEyXkFqcGdeQXVyNTc4MjczMTM@._V1_.jpg"
+            />
+            <div class="card-body">
+              <p class="card-text">The New Mutants (2020)</p>
+              <div>
+                <small>Imdb Rating:</small>
+                <small class="text-muted">5.3</small>
+              </div>
+              <div>
+                <small>Time:</small>
+                <small class="text-muted">1h 34min</small>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <a href="details">
+          <div class="card mb-4 shadow-sm">
+            <img
+              class="image-thumbnail"
+              src="https://m.media-amazon.com/images/M/MV5BYzg0NGM2NjAtNmIxOC00MDJmLTg5ZmYtYzM0MTE4NWE2NzlhXkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_.jpg"
+            />
+            <div class="card-body">
+              <p class="card-text">Tenet (2020)</p>
+              <div>
+                <small>Imdb Rating:</small>
+                <small class="text-muted">7.7</small>
+              </div>
+              <div>
+                <small>Time:</small>
+                <small class="text-muted">2h 30min</small>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <a href="details">
+          <div class="card mb-4 shadow-sm">
+            <img
+              class="image-thumbnail"
+              src="https://m.media-amazon.com/images/M/MV5BMjA0YjYyZGMtN2U0Ni00YmY4LWJkZTItYTMyMjY3NGYyMTJkXkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_.jpg"
+            />
+            <div class="card-body">
+              <p class="card-text">Frozen II (2019)</p>
+              <div>
+                <small>Imdb Rating:</small>
+                <small class="text-muted">6.9</small>
+              </div>
+              <div>
+                <small>Time:</small>
+                <small class="text-muted">1h 43min</small>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  {% if searched %}
+  <div class="container">
+    <div class="row">
+      <h1 class="col-md-12 text-center">Recently Searched Movies</h1>
+    </div>
+    <br />
+    <div class="row">
+      {% for i in searched %}
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <a href="details">
+          <div class="card mb-4 shadow-sm">
+            <img class="image-thumbnail" src="{{ i.Poster }}" />
+            <div class="card-body">
+              <p class="card-text">{{ i.Title }}</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  {% endif %}
+</div>
+
+{% endblock %}

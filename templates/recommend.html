@@ -1,0 +1,75 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container" style="margin-top: 100px">
+  <div class="jumbotron jumbotron-fluid text-center">
+    <h1 class="display-4">Recommendation System Model</h1>
+    <p class="lead">Designed to build personalized Movie Recommendations</p>
+    <hr class="my-4" />
+    <p class="lead">- Enter the name of Movie -</p>
+    <form
+      class="form-inline my-2 my-lg-0 justify-content-center"
+      action="title"
+      method="POST"
+    >
+      {% csrf_token %}
+      <input
+        class="form-control mr-sm-2"
+        type="search"
+        placeholder="Movie Name"
+        aria-label="Search"
+        name="title"
+        required
+      />
+      <button type="submit" class="btn btn-success">Search</button>
+    </form>
+    <!-- <hr class="my-4" /> -->
+    <h1 class="lead" style="margin: 20px">OR</h1>
+    <!-- <hr class="my-4" /> -->
+    <p class="lead">-Recommendation by-</p>
+    <form
+      class="form-inline my-2 my-lg-0 justify-content-center"
+      action="genre"
+      method="POST"
+    >
+      {% csrf_token %}
+      <select
+        class="form-control mr-sm-2 custom-select"
+        id="inputGroupSelect02"
+        name="genre"
+        required
+      >
+        <option value="">-Genre-</option>
+        <option value="1">Action</option>
+        <option value="2">Adventure</option>
+        <option value="3">Animation</option>
+        <option value="4">Comedy</option>
+        <option value="5">Crime</option>
+        <option value="6">Documentary</option>
+        <option value="7">Drama</option>
+        <option value="8">Family</option>
+        <option value="9">Fantasy</option>
+        <option value="10">History</option>
+        <option value="11">Horror</option>
+        <option value="12">Music</option>
+        <option value="13">Mystery</option>
+        <option value="14">Romance</option>
+        <option value="15">Sci-Fi</option>
+        <option value="16">TV Movie</option>
+        <option value="17">Thriller</option>
+        <option value="18">War</option>
+        <option value="19">Western</option>
+      </select>
+      <button type="submit" class="btn btn-success">Search</button>
+    </form>
+  </div>
+</div>
+
+<!-- <div class="container">
+  <div class="col-lg-3 col-md-4 col-sm-6">
+    <a href="#">
+      <img src="k68nPLbIST6NP96JmTxmZijEvCA.jpg" />
+    </a>
+  </div>
+</div> -->
+
+{% endblock %}

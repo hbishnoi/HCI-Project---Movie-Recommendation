@@ -1,0 +1,64 @@
+/* html {
+  background-color: #000000;
+} */
+body {
+  color: rgb(167, 157, 73);
+  background-color: WhiteSmoke;
+}
+
+.dark-mode {
+  background-color: black;
+}
+
+.navbar-light .navbar-brand {
+  color: white;
+}
+
+a {
+  color: rgb(167, 157, 73);
+}
+a:hover {
+  color: rgb(167, 157, 73);
+}
+.jumbotron {
+  /* background-color: transparent !important; */
+  padding: 2rem 2rem;
+}
+
+.jumbotron-fluid {
+  border-radius: 1rem;
+}
+
+.sr-only {
+  position: unset;
+}
+
+.signup-button {
+  margin-top: 30px;
+}
+
+.image-thumbnail {
+  height: 350px;
+}
+
+.checked {
+  color: orange;
+}
+
+.dark-mode {
+  background-color: black;
+}
+
+.footer {
+  /* position: absolute; */
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Set the fixed height of the footer here */
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #343a40 !important;
+}
+
+.imgPoster {
+  height: 300px;
+  width: 200px;
+}

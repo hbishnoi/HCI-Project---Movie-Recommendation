@@ -98,7 +98,9 @@
         <p>A must Watch</p>
         <span class="text-muted">Nice movie to watch in quarantine.</span>
     </div>
-    <div class="col-md-12 form-group">
+    
+    {% if user.is_authenticated %}
+      <div class="col-md-12 form-group">
         <span>Comment below:</span><br>
         <span>Rating: </span>
         <span class="fa fa-star" style="margin-left: 35px"></span>
@@ -109,7 +111,8 @@
         <span>Title: </span><input style="margin-left: 50px"><br>
         <span>Comment:</span><textarea type="text" class="text-muted" style="margin-left: 15px"></textarea>
         <button type="submit" class="btn" id="comment-submit" onclick="show();">submit</button>
-    </div>
+      </div>
+    {% endif %}
   </div>
 </div>
 
